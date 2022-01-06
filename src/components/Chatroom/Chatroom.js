@@ -10,7 +10,8 @@ const Chatroom = (props) => {
   //و داخل یوزرف میزاریم چون هربار کامپوننت اجرا میشه ما نمیخایم ارتباط برقرار بشه
   //الان من هرچی توی این کامپوننت بنویسم وصله به سوکت و داخل بکند داره لاگ میگیره
 
-  const socket = useRef(io.connect("http://localhost:3010/socket")); //درخواست سمت سرور
+  // const socket = useRef(io.connect("http://localhost:3010/socket")); //درخواست سمت سرور
+  const socket = useRef(io.connect("https://saeb-chat-f-jkh55sk2a-habibollahi24.vercel.app/socket")); //درخواست سمت سرور
   const [text, setText] = useState("");
   const [message, setMessage] = useState([]);
   const addMessage = () => {
